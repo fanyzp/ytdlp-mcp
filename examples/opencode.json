@@ -1,0 +1,13 @@
+{
+  "mcp": {
+    "servers": {
+      "ytdlp": {
+        "type": "local",
+        "command": ["node", "/path/to/ytdlp-mcp/src/index.js"],
+        "environment": {
+          "YTDLP_DOWNLOAD_DIR": "/path/to/downloads/ytdlp-mcp"
+        }
+      }
+    }
+  }
+}

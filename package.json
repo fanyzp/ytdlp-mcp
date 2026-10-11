@@ -1,0 +1,25 @@
+{
+  "name": "ytdlp-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that enables AI agents to download videos and audio from supported platforms using yt-dlp through natural language instructions.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fanyzp/ytdlp-mcp.git"
+  },
+  "keywords": ["mcp", "yt-dlp", "youtube", "download", "model-context-protocol"],
+  "bin": {
+    "ytdlp-mcp": "./src/index.js"
+  },
+  "files": ["src/", "scripts/", "skill/", "examples/", "PROMPT.md", "README.md", "LICENSE"],
+  "scripts": {
+    "setup": "node scripts/install.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

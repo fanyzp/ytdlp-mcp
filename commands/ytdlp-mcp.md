@@ -1,0 +1,19 @@
+---
+description: Download video or audio from any link using ytdlp-mcp
+---
+
+Use the ytdlp-mcp MCP server to handle this media request: $ARGUMENTS
+
+Route by intent. VIEW tools never download, DOWNLOAD tools do one action per call:
+
+- Info about a URL (title, duration, uploader): `probe`
+- Available qualities: `formats`, or `inspect` for the short answer
+- Unfamiliar site: `supported` first. If unsupported, say so and stop.
+- Download video: `inspect` the URL, then `get_video` with its quality
+- Audio only: `get_audio` (default opus 64K, mp3 only on explicit request)
+- Subtitles: `get_subtitles` with the requested language
+- Several URLs: `queue` to preview plans, then `fetch_all` to execute
+- yt-dlp question (cookies, formats, flags): `advise`
+- Re-encode for a platform: `convert` with `site`
+
+Never run raw `yt-dlp` or `ffmpeg` shell commands. Always go through the MCP tools.

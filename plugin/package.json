@@ -1,0 +1,11 @@
+{
+  "name": "opencode-ytdlp-mcp",
+  "version": "1.0.0",
+  "description": "OpenCode plugin: your AI downloads like yt-dlp thinks and edits like ffmpeg works",
+  "type": "module",
+  "license": "MIT",
+  "main": "./ytdlp.ts",
+  "peerDependencies": {
+    "@opencode-ai/plugin": "*"
+  }
+}
