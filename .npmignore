@@ -1,0 +1,15 @@
+# npm package ignores
+node_modules/
+.git/
+.github/
+.vscode/
+.idea/
+coverage/
+test/
+tests/
+*.log
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example

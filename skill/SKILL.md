@@ -8,7 +8,7 @@ version: 1.0.0
 
 Your AI downloads like yt-dlp thinks and edits like ffmpeg works. One server: probe any of 1300+ supported sites, download one file or a whole batch with polite delays, answer configuration questions, re-encode for the platform it will be posted on.
 
-- VIEW (no download): `probe`, `formats`, `supported`, `inspect`
+- VIEW (no download): `probe`, `formats`, `supported`, `inspect`, `search`
 - DOWNLOAD (one action per call): `get_video`, `get_audio`, `get_subtitles`
 - BULK (automation): `queue`, `fetch_all`, `watch`
 - KNOWLEDGE (no download): `advise`

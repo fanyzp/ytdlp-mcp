@@ -8,18 +8,40 @@
     "type": "git",
     "url": "https://github.com/fanyzp/ytdlp-mcp.git"
   },
-  "keywords": ["mcp", "yt-dlp", "youtube", "download", "model-context-protocol"],
+  "keywords": [
+    "mcp",
+    "yt-dlp",
+    "youtube",
+    "download",
+    "model-context-protocol"
+  ],
   "bin": {
     "ytdlp-mcp": "./src/index.js"
   },
-  "files": ["src/", "scripts/", "skill/", "examples/", "PROMPT.md", "README.md", "LICENSE"],
+  "files": [
+    "src/",
+    "!src/**/*.test.js",
+    "scripts/",
+    "skill/",
+    "examples/",
+    "PROMPT.md",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "setup": "node scripts/install.mjs"
+    "setup": "node scripts/install.mjs",
+    "format": "prettier --write \"src/index.js\" \"src/schemas.js\" \"src/search.js\" \"src/schemas.test.js\" \"src/search.integration.test.js\" \"README.md\" \"package.json\"",
+    "format:check": "prettier --check \"src/index.js\" \"src/schemas.js\" \"src/search.js\" \"src/schemas.test.js\" \"src/search.integration.test.js\" \"README.md\" \"package.json\"",
+    "test": "node --test"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.17.0"
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "zod": "^4.6.6"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
   }
 }
