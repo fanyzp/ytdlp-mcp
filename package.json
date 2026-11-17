@@ -1,19 +1,24 @@
 {
-  "name": "ytdlp-mcp",
+  "name": "@fanyzp/ytdlp-mcp",
   "version": "1.0.0",
   "description": "An MCP server that enables AI agents to download videos and audio from supported platforms using yt-dlp through natural language instructions.",
   "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fanyzp/ytdlp-mcp.git"
+    "url": "git+https://github.com/fanyzp/ytdlp-mcp.git"
   },
   "keywords": [
     "mcp",
+    "model-context-protocol",
     "yt-dlp",
     "youtube",
-    "download",
-    "model-context-protocol"
+    "video-downloader",
+    "audio",
+    "ffmpeg",
+    "ai-agent",
+    "subtitles",
+    "tiktok"
   ],
   "bin": {
     "ytdlp-mcp": "./src/index.js"
@@ -26,7 +31,10 @@
     "examples/",
     "PROMPT.md",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "server.json",
+    "smithery.yaml",
+    "glama.json"
   ],
   "scripts": {
     "setup": "node scripts/install.mjs",
@@ -43,5 +51,14 @@
   },
   "devDependencies": {
     "prettier": "^3.9.10"
+  },
+  "mcpName": "io.github.fanyzp/ytdlp-mcp",
+  "author": "fanyzp",
+  "homepage": "https://github.com/fanyzp/ytdlp-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/fanyzp/ytdlp-mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

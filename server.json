@@ -1,0 +1,54 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "description": "Download video and audio with yt-dlp via AI agents: inspect, batch, subtitles, convert.",
+  "name": "io.github.fanyzp/ytdlp-mcp",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "Directory where downloaded files are saved.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false,
+          "name": "YTDLP_DOWNLOAD_DIR"
+        },
+        {
+          "description": "Path to a Netscape-format cookies.txt file for sites that require a signed-in session. Never paste cookie contents into chat.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false,
+          "name": "YTDLP_COOKIES_FILE"
+        },
+        {
+          "default": "yt-dlp",
+          "description": "Path to the yt-dlp binary.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false,
+          "name": "YTDLP_BIN"
+        },
+        {
+          "default": "ffmpeg",
+          "description": "Path to the ffmpeg binary, used for merging and converting.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false,
+          "name": "FFMPEG_BIN"
+        }
+      ],
+      "identifier": "@fanyzp/ytdlp-mcp",
+      "registryType": "npm",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "version": "1.0.0"
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/fanyzp/ytdlp-mcp"
+  },
+  "title": "yt-dlp MCP",
+  "version": "1.0.0"
+}

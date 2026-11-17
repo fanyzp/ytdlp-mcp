@@ -1,0 +1,37 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+# Local stdio server. Requires yt-dlp and ffmpeg on the user's PATH
+# (or YTDLP_BIN / FFMPEG_BIN pointing at them).
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      downloadDir:
+        type: string
+        description: "Directory where downloaded files are saved. Defaults to ~/Downloads/ytdlp-mcp."
+      cookiesFile:
+        type: string
+        description: "Optional path to a Netscape-format cookies.txt for signed-in sites."
+      ytdlpBin:
+        type: string
+        description: "Path to the yt-dlp binary."
+        default: "yt-dlp"
+      ffmpegBin:
+        type: string
+        description: "Path to the ffmpeg binary."
+        default: "ffmpeg"
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@fanyzp/ytdlp-mcp'],
+      env: {
+        ...(config.downloadDir ? { YTDLP_DOWNLOAD_DIR: config.downloadDir } : {}),
+        ...(config.cookiesFile ? { YTDLP_COOKIES_FILE: config.cookiesFile } : {}),
+        YTDLP_BIN: config.ytdlpBin || 'yt-dlp',
+        FFMPEG_BIN: config.ffmpegBin || 'ffmpeg'
+      }
+    })
+  exampleConfig:
+    ytdlpBin: "yt-dlp"
+    ffmpegBin: "ffmpeg"
